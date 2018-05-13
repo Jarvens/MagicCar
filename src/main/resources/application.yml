@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/moka?useSSL=false
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: root
+    initialSize: 5
+    minIdle: 1
+    maxActive: 20
+    maxWait: 5000
+    filters: stat,wall
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
